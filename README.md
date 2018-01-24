@@ -19,5 +19,6 @@ Dotfiles pribadi maupun curryan darimana sadja
 
 
 ## Social Media
-[Google+](https://plus.google.com/+FikriOmar)
-[DeviantArt](http://fikriomar16.deviantart.com)
+[Google+](https://plus.google.com/+FikriOmar) <br />
+[DeviantArt](http://fikriomar16.deviantart.com) <br />
+[Twitter](https://twitter.com/fikriomar16)
