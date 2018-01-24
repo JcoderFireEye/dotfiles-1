@@ -1,0 +1,212 @@
+set $mod mod1
+
+font pango:mplus Nerd Font 9
+
+set $background #2F343F
+set $foreground #ffffff
+set $gray       #d0d0d0
+#set $primary    #F58E8E
+#set $secondary  #79D4D5
+#set $tertiary   #7AABD4
+
+set $primary    #BD93F9
+set $secondary  #FF79C6
+set $tertiary   #8BE9FD
+
+set $additional	#26CE8D
+set $warning    #E7176A
+
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+#autostart
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id compton
+exec --no-startup-id nm-applet
+#exec_always --no-startup-id /home/omar/.config/polybar/launch.sh
+
+# set wallpaper
+#exec --no-startup-id nitrogen --restore
+exec --no-startup-id sh .fehbg
+
+# start a terminal
+bindsym $mod+Return exec gnome-terminal
+
+# start alternative terminal
+bindsym $mod+Shift+Return exec termite
+
+# start a web browser
+bindsym $mod+w exec firefox
+
+# file manager
+bindsym $mod+f exec pcmanfm
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+#change volume
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master '5%+'
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master '5%-'
+
+# music control
+bindsym XF86AudioNext exec mpc next --port 6601
+bindsym XF86AudioPrev exec mpc prev --port 6601
+bindsym XF86AudioPlay exec mpc toggle --port 6601
+bindsym XF86AudioPause exec mpc toggle --port 6601
+bindsym XF86AudioStop exec mpc stop --port 6601
+
+#screenshots
+bindsym Print exec --no-startup-id scrot
+bindsym $mod+Print exec --no-startup-id scrot -u -b
+bindsym Control+Print exec --no-startup-id xfce4-screenshooter
+
+# program launcher
+bindsym $mod+d exec dmenu_run -i -nb '#2f343f' -nf '#BD93F9' -sb '#BD93F9' -sf '#2f343f' -fn 'iosevka Nerd Font:size=11' -x 27 -y 27 -w 420 -p 'Run '
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+s exec rofi -show run -fullscreen True -lines 3 -line-margin 6 -padding 270 -bw 0 -opacity "70" -font "iosevka Nerd Font 12" -scrollbar-width 0 -separator-style "none"
+
+bindsym $mod+m exec urxvt -g 70x10 -e ncmpcpp -c ~/.ncmpcpp/config-art
+
+# change focus
+bindsym $mod+Control+Left focus left
+bindsym $mod+Control+Down focus down
+bindsym $mod+Control+Up focus up
+bindsym $mod+Control+Right focus right
+
+# my own move
+bindsym $mod+Left move left
+bindsym $mod+Down move down
+bindsym $mod+Up move up
+bindsym $mod+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+Control+f fullscreen
+
+# toggle tiling / floating
+bindsym $mod+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+Control+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+Control+c focus parent
+ 
+# focus the child container
+bindsym $mod+Shift+c focus child
+
+
+# Set workspaces
+set $ws1  "  "
+set $ws2  "  "
+set $ws3  "  "
+set $ws4  "  "
+set $ws5  "  "
+set $ws6  "  "
+set $ws7  "  "
+set $ws8  "  "
+set $ws9  "  "
+set $ws10 "  "
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+BackSpace reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Control+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+Delete exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Tab mode "default"
+}
+mode "gaps" {
+        bindsym Down gaps inner all minus 2
+        bindsym Left gaps outer all minus 2
+        bindsym Up gaps inner all plus 2
+        bindsym Right gaps outer all plus 2
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Tab    mode "default"
+}
+bindsym $mod+g mode "gaps"
+
+bindsym $mod+r mode "resize"
+
+# colors                BORDER      BACKGROUND TEXT        INDICATOR
+client.focused          $primary    $primary   $foreground $primary
+client.focused_inactive $secondary  $secondary $foreground $secondary
+client.unfocused        $tertiary   $tertiary  $background $tertiary
+client.urgent           $gray       $gray      $foreground $gray  
+
+# Start Polybar
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# Start i3bar to display a workspace bar (plus the system information i3status)
+bar {
+    i3bar_command     i3bar  
+    status_command    i3blocks
+    position          top
+    workspace_buttons yes
+    separator_symbol ""
+    tray_output LVDS1
+    font pango: iosevka Nerd Font, fontawesome 9
+    colors {
+        background $background
+        statusline $foreground
+        separator $foreground
+        
+        # <border name>		<border>		<background>		<text>
+        focused_workspace	$primary		$primary		$background
+        active_workspace	$background		$background		$secondary
+        inactive_workspace	$background		$background		$secondary
+        urgent_workspace	$background		$background		$tertiary
+    }
+}
+
+#for_window [class="^.*"] border normal 0
+#for_window [class=".*"] title_format " >_ %title "
+
+for_window [class=".*"] border pixel 3
+gaps inner 20
+gaps outer 10
+#for_window [class=".*"] floating enable

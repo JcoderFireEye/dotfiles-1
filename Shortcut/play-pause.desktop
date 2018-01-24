@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Comment=
+Terminal=false
+Name=Play/Pause
+Exec=mpc toggle --port 6601
+Type=Application
+#Icon=applications-multimedia
+Icon=media-playback-start

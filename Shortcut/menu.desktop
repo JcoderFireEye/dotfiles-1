@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Comment=tampil menu
+Terminal=false
+Name=Menu
+Exec=dmenu_run -i -fn 'mplus Nerd Font:size=9' -x 40 -y 90 -w 350 -p 'Search ' -nb '#e7e8eb' -nf '#2f343f' -sb '#e7e8eb' -sf '#5294E2' -o 0.9 -h 30 -l 5
+Type=Application
+#Icon=menu
+Icon=/home/omar/.icons/menu.png

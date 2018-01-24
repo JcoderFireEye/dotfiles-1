@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Comment=
+Terminal=false
+Name=Logout
+Exec=lxsession-logout --prompt " Do you really want to exit ? "
+Type=Application
+Icon=system-shutdown-panel
