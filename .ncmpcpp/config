@@ -2,7 +2,6 @@
 mpd_music_dir = "/media/omar/Pribadi/MFO/Music"
 
 mpd_host = "127.0.0.1"
-#mpd_host = "localhost"
 mpd_port = "6601"
 mouse_list_scroll_whole_page = "yes"
 lines_scrolled = "1"
@@ -14,9 +13,7 @@ visualizer_sync_interval = "10"
 visualizer_type = "spectrum"
 
 #visualizer_look = "▋▋"
-#visualizer_look = "█▋"
 visualizer_look = "▌▌"
-#visualizer_look = "██"
 
 message_delay_time = "3"
 playlist_shorten_total_times = "yes"
@@ -40,9 +37,7 @@ main_window_highlight_color = "white"
 progressbar_elapsed_color = "white"
 progressbar_color = "black"
 
-#progressbar_look = "█ "
 progressbar_look = "▃▃▃"
-#progressbar_look = "▉▉▉"
 #progressbar_look = "─⊙ "
 
 mouse_support = "yes"
@@ -52,8 +47,6 @@ statusbar_visibility = "no"
 statusbar_color = "white"
 #visualizer_color = red, green, yellow, blue, magenta, cyan, white
 visualizer_color = "white"
-#visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
-#visualizer_color = 31, 32, 33, 26, 25
 
 titles_visibility = "no"
 enable_window_title = "yes"
@@ -64,7 +57,6 @@ enable_window_title = "yes"
 now_playing_prefix = "$b"
 now_playing_suffix = "$/b$6$7 "
 
-#song_columns_list_format = "(6)[]{} (23)[red]{a} (26)[white]{t|f} (40)[blue]{b} (4)[red]{l}"
 song_columns_list_format = "(6)[]{} (23)[blue]{a} (26)[white]{t|f} (5f)[magenta]{l} (3f)[]{}"
 
 color1 = "white"
