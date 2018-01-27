@@ -4,6 +4,7 @@
 
 compton &
 nitrogen --restore &
+xrdb merge ~/.Xresources &
 
 hc() {
     herbstclient "$@"
@@ -26,7 +27,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 #hc keybind $Mod-Return spawn ${TERMINAL:-xterm} # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal}
-hc keybind $Mod-d spawn dmenu_run -i -nb '#2f343f' -nf '#e7e8eb' -sb '#e7e8eb' -sf '#2f343f' -fn 'ShureTechMono Nerd Font:size=11' -x 27 -y 27 -w 420 -p 'Search '
+hc keybind $Mod-d spawn dmenu_run -i -nb '#2f343f' -nf '#e7e8eb' -sb '#e7e8eb' -sf '#2f343f' -fn 'mplus Nerd Font:size=11' -x 245 -w 950 -p 'Search ' -h 23
 hc keybind XF86AudioRaiseVolume spawn amixer -D pulse sset Master '3%+'
 hc keybind XF86AudioLowerVolume spawn amixer -D pulse sset Master '3%-'
 hc keybind XF86AudioNext spawn mpc next --port 6601
@@ -182,6 +183,7 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 
 # find the panel
 panel=~/.config/herbstluftwm/panel.sh
+#panel=~/.config/herbstluftwm/panel
 [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor

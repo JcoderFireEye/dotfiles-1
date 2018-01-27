@@ -11,12 +11,13 @@ fi
 x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
-panel_height=20
+panel_height=23
 font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
-font2="ShureTechMono Nerd Font:size=10:antialias=false"
+font2="mplus Nerd Font:size=11:antialias=false"
 bgcolor=$(hc get frame_border_normal_color)
 selbg=$(hc get window_border_active_color)
 selfg='#101010'
+currentplaying=""
 
 ####
 # Try to find textwidth binary.
@@ -62,7 +63,8 @@ hc pad $monitor $panel_height
     # e.g.
     #   date    ^fg(#efefef)18:33^fg(#909090), 2013-10-^fg(#efefef)29
 
-    #mpc idleloop player &
+    mpc -p 6601 idleloop player | cat &
+    mpc_pid=$!
     while true ; do
         # "date" output is checked once a second, but an event is only
         # generated if the output changed compared to the previous run.
@@ -116,7 +118,9 @@ hc pad $monitor $panel_height
             fi
         done
         echo -n "$separator"
-        echo -n "^bg()^fg() ${windowtitle//^/^^}"
+        echo -n "^bg(#e7e8eb)^fg(#2f343f) ${currentplaying} "
+        echo -n "$separator"
+        echo -n "^bg()^fg() ${windowtitle//^/^^} "
         # small adjustments
         right="$separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
@@ -141,6 +145,9 @@ hc pad $monitor $panel_height
                 #echo "resetting tags" >&2
                 IFS=$'\t' read -ra tags <<< "$(hc tag_status $monitor)"
                 ;;
+	    mpd_player|player)
+		currentplaying="$(mpc -p 6601 current | head -1)"
+		;;
             date)
                 #echo "resetting date" >&2
                 date="${cmd[@]:1}"
@@ -175,7 +182,7 @@ hc pad $monitor $panel_height
             #    ;;
         esac
     done
-
+    kill $mpc_pid
     ### dzen2 ###
     # After the data is gathered and processed, the output of the previous block
     # gets piped to dzen2.

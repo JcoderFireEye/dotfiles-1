@@ -14,7 +14,9 @@ visualizer_sync_interval = "10"
 visualizer_type = "spectrum"
 
 #visualizer_look = "▋▋"
-visualizer_look = "█▋"
+#visualizer_look = "█▋"
+visualizer_look = "▌▌"
+#visualizer_look = "██"
 
 message_delay_time = "3"
 playlist_shorten_total_times = "yes"
@@ -29,15 +31,18 @@ follow_now_playing_lyrics = "yes"
 locked_screen_width_part = "60"
 display_bitrate = "no"
 external_editor = "nano"
+main_window_color = default
 
-execute_on_song_change="mpd-popup"
+execute_on_song_change="/media/omar/Pribadi/MFO/Coding/mpd-popup"
 
 main_window_highlight_color = "white"
 
 progressbar_elapsed_color = "white"
 progressbar_color = "black"
 
+#progressbar_look = "█ "
 progressbar_look = "▃▃▃"
+#progressbar_look = "▉▉▉"
 #progressbar_look = "─⊙ "
 
 mouse_support = "yes"
@@ -47,21 +52,25 @@ statusbar_visibility = "no"
 statusbar_color = "white"
 #visualizer_color = red, green, yellow, blue, magenta, cyan, white
 visualizer_color = "white"
+#visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
+#visualizer_color = 31, 32, 33, 26, 25
 
 titles_visibility = "no"
 enable_window_title = "yes"
 
-now_playing_prefix = "$b"
-#now_playing_prefix = "$u$2"
-now_playing_suffix = "$8$/b"
-#now_playing_suffix = "$2$/u$2"
+#now_playing_prefix = " $b$6$7"
+#now_playing_suffix = "$/b"
 
-song_columns_list_format = "(6)[]{} (23)[red]{a} (26)[white]{t|f} (40)[blue]{b} (4)[red]{l}"
+now_playing_prefix = "$b"
+now_playing_suffix = "$/b$6$7 "
+
+#song_columns_list_format = "(6)[]{} (23)[red]{a} (26)[white]{t|f} (40)[blue]{b} (4)[red]{l}"
+song_columns_list_format = "(6)[]{} (23)[blue]{a} (26)[white]{t|f} (5f)[magenta]{l} (3f)[]{}"
 
 color1 = "white"
 color2 = "black"
 
-song_list_format = " $7%l  $2%t $R$5%a "
+song_list_format = " $7%l  $6%t $R$5%a "
 #song_list_format = " $7%l │ $2%t $R$7│ $R$5%a "
 
 song_status_format = "$b$7♫ $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
