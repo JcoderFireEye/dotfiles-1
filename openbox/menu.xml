@@ -19,12 +19,6 @@
 			</action>
 		</item>
 		<separator/>
-		<item label=" Now Playing...">
-			<action name="Execute">
-				<execute>/media/omar/Pribadi/MFO/Coding/mpd-popup</execute>
-			</action>
-		</item>
-		<separator/>
 		<menu id="root-menu-71489" label=" Accessories">
 			<separator label=" Accessories"/>
 			<menu id="root-menu-71489-57125" label=" File Manager">
@@ -174,12 +168,7 @@
 				<separator label=" Music Player"/>
 				<item label=" Ncmpcpp">
 					<action name="Execute">
-						<execute>urxvt -g 70x10 -e ncmpcpp</execute>
-					</action>
-				</item>
-				<item label=" Ncmpcpp with Albumart">
-					<action name="Execute">
-						<execute>urxvt -g 70x10 -e ncmpcpp -c ~/.ncmpcpp/config-art</execute>
+						<execute>urxvt -g 70x10 -e ncmpcpp -c ~/.ncmpcpp/ncmpcpp2</execute>
 					</action>
 				</item>
 				<item label=" Audacious">
@@ -187,6 +176,8 @@
 						<execute>audacious</execute>
 					</action>
 				</item>
+				<separator label=" MPD Controller"/>
+				<menu execute="~/.config/openbox/pipempd.sh" id="pipe-752159" label=" Now Playing"/>
 			</menu>
 		</menu>
 		<menu id="root-menu-161838" label=" Tools">

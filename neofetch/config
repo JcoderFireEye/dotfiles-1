@@ -9,17 +9,19 @@
 print_info() {
     #info title
     #info underline
-    prin "\033[36;1;35m Wat Zit Too Ya "
-    prin "\033[31;1;33m ------------------"
-    info "OS" distro
+    prin "\033[0;30m\033[105m\033[0;105m\033[1;30m Wat Zit Too Ya \033[40m\033[1;35m"
+    info line_break
+    #prin "\033[1;35m Wat Zit Too Ya "
+    #prin "\033[1;33m ----------------"
+    #info "OS" distro
     #info "Model" model
     info "Kernel" kernel
     #info "Uptime" uptime
     #info "Packages" packages
     info "Shell" shell
-    info "Resolution" resolution
+    #info "Resolution" resolution
     #info underline
-    prin "\033[31;1;34m ------------------"
+    #prin "\033[31;1;34m ------------------"
     info "DE" de
     info "WM" wm
     #info "WM Theme" wm_theme
@@ -44,6 +46,9 @@ print_info() {
 
     info line_break
     info cols
+    info line_break
+    prin "\033[0;30m\033[43m\033[1;43m  github.com/fikriomar16 \033[40m\033[0;33m"
+    prin "\033[0;30m\033[42m\033[1;42m  fikriomar16.deviantart.com \033[40m\033[0;32m"
     info line_break
 }
 
@@ -563,9 +568,8 @@ image_backend="ascii"
 #       In ascii mode, distro ascii art will be used and in an image mode, your
 #       wallpaper will be used.
 
-#image_source="auto"
-#image_source="/home/omar/1604-logout-banner.png"
-image_source="wallpaper"
+image_source="auto"
+#image_source="wallpaper"
 
 # Ascii Options
 
@@ -622,7 +626,7 @@ thumbnail_dir="${XDG_CACHE_HOME:-${HOME}/.cache}/thumbnails/neofetch"
 #
 # See this wiki page to learn about the fit and fill options.
 # https://github.com/dylanaraps/neofetch/wiki/What-is-Waifu-Crop%3F
-crop_mode="fit"
+crop_mode="normal"
 
 # Crop offset
 # Note: Only affects 'normal' crop mode.

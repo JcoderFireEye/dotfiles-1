@@ -1,20 +1,17 @@
 set $mod mod1
 
-font pango:mplus Nerd Font 9
+font pango:iosevka Nerd Font 10
 
 set $background #2F343F
 set $foreground #ffffff
 set $gray       #d0d0d0
-#set $primary    #F58E8E
-#set $secondary  #79D4D5
-#set $tertiary   #7AABD4
 
-set $primary    #BD93F9
-set $secondary  #FF79C6
-set $tertiary   #8BE9FD
+set $primary    #cca8c9
+set $secondary  #9cdbdf
+set $tertiary   #9ad4c8
 
-set $additional	#26CE8D
-set $warning    #E7176A
+set $additional	#bae8d2
+set $warning    #de8990
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -24,7 +21,10 @@ floating_modifier $mod
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id compton
 exec --no-startup-id nm-applet
-#exec_always --no-startup-id /home/omar/.config/polybar/launch.sh
+exec --no-startup-id xrdb merge ~/.Xresources
+
+# Polybar
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # set wallpaper
 #exec --no-startup-id nitrogen --restore
@@ -62,11 +62,11 @@ bindsym $mod+Print exec --no-startup-id scrot -u -b
 bindsym Control+Print exec --no-startup-id xfce4-screenshooter
 
 # program launcher
-bindsym $mod+d exec dmenu_run -i -nb '#2f343f' -nf '#BD93F9' -sb '#BD93F9' -sf '#2f343f' -fn 'iosevka Nerd Font:size=11' -x 27 -y 27 -w 420 -p 'Run '
+bindsym $mod+d exec dmenu_run -i -nb '#2f343f' -nf '#cca8c9' -sb '#cca8c9' -sf '#2f343f' -fn 'iosevka Nerd Font:size=10' -x 27 -y 27 -w 600 -p 'Run ' -o 0.9 -h 27
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+s exec rofi -show run -fullscreen True -lines 3 -line-margin 6 -padding 270 -bw 0 -opacity "70" -font "iosevka Nerd Font 12" -scrollbar-width 0 -separator-style "none"
 
-bindsym $mod+m exec urxvt -g 70x10 -e ncmpcpp -c ~/.ncmpcpp/config-art
+bindsym $mod+m exec urxvt -g 70x10 -e ncmpcpp -c ~/.ncmpcpp/ncmpcpp2
 
 # change focus
 bindsym $mod+Control+Left focus left
@@ -108,11 +108,11 @@ set $ws2  "  "
 set $ws3  "  "
 set $ws4  "  "
 set $ws5  "  "
-set $ws6  "  "
-set $ws7  "  "
-set $ws8  "  "
-set $ws9  "  "
-set $ws10 "  "
+set $ws6  "  "
+set $ws7  "  "
+set $ws8  "  "
+set $ws9  "  "
+set $ws10 "  "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -168,8 +168,8 @@ mode "gaps" {
         bindsym Escape mode "default"
         bindsym Tab    mode "default"
 }
-bindsym $mod+g mode "gaps"
 
+bindsym $mod+g mode "gaps"
 bindsym $mod+r mode "resize"
 
 # colors                BORDER      BACKGROUND TEXT        INDICATOR
@@ -177,9 +177,6 @@ client.focused          $primary    $primary   $foreground $primary
 client.focused_inactive $secondary  $secondary $foreground $secondary
 client.unfocused        $tertiary   $tertiary  $background $tertiary
 client.urgent           $gray       $gray      $foreground $gray  
-
-# Start Polybar
-#exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status)
 bar {
@@ -193,7 +190,7 @@ bar {
     colors {
         background $background
         statusline $foreground
-        separator $foreground
+        separator $primary
         
         # <border name>		<border>		<background>		<text>
         focused_workspace	$primary		$primary		$background
@@ -209,4 +206,13 @@ bar {
 for_window [class=".*"] border pixel 3
 gaps inner 20
 gaps outer 10
+
+for_window [class=Gedit|Nautilus] floating enable border pixel 0
+for_window [class=Xfce4-notifyd] border pixel 0
+for_window [class=URxvt|Termite] floating enable
+for_window [class=Gnome-terminal] floating enable
+for_window [class=Firefox] floating enable
+for_window [class=Pcmanfm] floating enable
+for_window [class=Audacious] floating enable
+for_window [class=Gpicview|Ristretto|feh] floating enable border pixel 0
 #for_window [class=".*"] floating enable
