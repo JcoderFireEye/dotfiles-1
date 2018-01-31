@@ -17,32 +17,32 @@ URxvt*iconFile: /usr/share/icons/Papirus/64x64/apps/utilities-x-terminal.svg
 *color8: #444A57
 
 ! red
-*color1: #FF5C57
-*color9: #FF5C57
+*.color1:	#de8990
+*.color9:	#d0a8ab
 
 ! green
-*color2: #5AF78E
-*color10: #5AF78E
+*.color2:	#94daa9
+*.color10:	#bae8d2
 
 ! yellow
-*color3: #F3F99D
-*color11: #F3F99D
+*.color3:	#dee7aa
+*.color11:	#d7c96b
 
 ! blue
-*color4: #57C7FF
-*color12: #57C7FF
+*.color4:	#9cdbdf
+*.color12:	#6cb4dd
 
 ! magenta
-*color5: #FF6AC1
-*color13: #FF6AC1
+*.color5:	#cca8c9
+*.color13:	#db79bf
 
 ! cyan
-*color6: #9AEDFE
-*color14: #9AEDFE
+*.color6:	#9ad4c8
+*.color14:	#59b0b2
 
 ! white
-*color7: #EFF0EB
-*color15: #EFF0EB
+*.color7:	#e1e1e1
+*.color15:	#f0f0f0
 
 
 URxvt.perl-ext-common:			default,matcher,tabbedex,vtwheel,clipboard
@@ -109,18 +109,25 @@ rofi.terminal:                       gnome-terminal
 rofi.ssh-client:                     ssh
 rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
 rofi.opacity:                        100
-rofi.width:                          50
+rofi.width:                          80
 rofi.lines:                          7
-rofi.columns:                        1
-rofi.font:                           iosevka Nerd Font 10
-rofi.bw:                             0
+rofi.columns:                        4
+rofi.font:                           iosevka Nerd Font 9
+rofi.bw:                             10
 rofi.location:                       0
-rofi.padding:                        20
+rofi.padding:                        30
 rofi.levenshtein-sort:               true
 rofi.case-sensitive:                 false
 rofi.fuzzy:                          false
-rofi.line-margin:                    2
-rofi.separator-style:                none
+rofi.line-margin:                    10
+rofi.separator-style:                solid
 rofi.hide-scrollbar:                 true
 rofi.markup-rows:                    false
-rofi.scrollbar-width: 8
+rofi.scrollbar-width: 0
+rofi.color-enabled: true
+! State:           ´bg´,     ´fg´,     ´bgalt´,  ´hlbg´,   ´hlfg´
+rofi.color-normal: #2f343f,  #e7e8eb,  #2f343f,  #e7e8eb,  #2f343f
+rofi.color-urgent: #2f343f,  #e7e8eb,  #2f343f,  #e7e8eb,  #2f343f
+rofi.color-active: #2f343f,  #e7e8eb,  #2f343f,  #e7e8eb,  #2f343f
+!                  ´background´, ´border´
+rofi.color-window: #2f343f,      #75444A57
