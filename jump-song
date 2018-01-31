@@ -1,0 +1,8 @@
+#!/bin/sh
+#change songs in your playlist via Rofi
+
+ROFI=$(mpc -p 6601 playlist | rofi -dmenu)
+if [ "$ROFI" = "" ]; then exit; fi
+	POS=$(mpc -p 6601 playlist | grep -n "$ROFI" | awk -F: '{print $1}')
+	mpc -p 6601 play $POS;
+;;
