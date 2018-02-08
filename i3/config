@@ -1,3 +1,10 @@
+# .__ ________
+# |__|\_____  \__  _  __ _____
+# |  |  _(__  <\ \/ \/ //     \
+# |  | /       \\     /|  Y Y  \
+# |__|/______  / \/\_/ |__|_|  /
+#            \/              \/
+
 set $mod mod1
 
 font pango:iosevka Nerd Font 10
@@ -12,7 +19,6 @@ set $tertiary   #9ad4c8
 
 set $additional	#bae8d2
 set $warning    #de8990
-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -100,7 +106,6 @@ bindsym $mod+Control+c focus parent
  
 # focus the child container
 bindsym $mod+Shift+c focus child
-
 
 # Set workspaces
 set $ws1  "  "

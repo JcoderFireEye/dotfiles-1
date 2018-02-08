@@ -1,5 +1,16 @@
 Dotfiles pribadi maupun curryan darimana sadja
 
+```sh
+
+                         ___  ___   ___        ___                         ___  ___   ___
+  .'|=|`.     .'|=|`.   `._|=|   |=|_.'   .'|=|_.'   .'|   .'|        .'|=|_.' |   |=|_.'
+.'  | |  `. .'  | |  `.      |   |      .'  |  ___ .'  | .'  |      .'  |  ___ `.  |
+|   | |   | |   | |   |      |   |      |   |=|_.' |   | |   |      |   |=|_.'   `.|=|`.
+|   | |  .' `.  | |  .'      `.  |      |   |      |   | |   |  ___ |   |  ___  ___  |  `.
+|___|=|.'     `.|=|.'          `.|      |___|      |___| |___|=|_.' |___|=|_.'  `._|=|___|
+
+```
+
 ## Preview
 
 ## Openbox
@@ -12,7 +23,7 @@ Dotfiles pribadi maupun curryan darimana sadja
 ![i3wm](https://orig00.deviantart.net/2c8e/f/2018/029/b/7/play_with_i3_gaps_by_fikriomar16-dc1ircw.png)
 
 ## bspwm
-![bspwm](https://orig00.deviantart.net/d1cd/f/2017/332/d/3/e_c_c_e_n_t_r_i_c_by_fikriomar16-dbv3wqn.png)
+![bspwm](https://orig00.deviantart.net/776d/f/2018/037/5/c/_re_make_by_fikriomar16-dc2citp.png)
 
 ## herbstluftwm
 ![hlwm](https://orig00.deviantart.net/af96/f/2018/026/6/8/herbstluftwm_by_fikriomar16-dc1afhg.png)

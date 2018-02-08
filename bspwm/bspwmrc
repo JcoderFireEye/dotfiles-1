@@ -1,7 +1,16 @@
 #! /bin/sh
 
+# ___.
+# \_ |__    ____________ __  _  __ _____ _______   ____
+#  | __ \  /  ___/\____ \\ \/ \/ //     \\_  __ \_/ ___\
+#  | \_\ \ \___ \ |  |_> >\     /|  Y Y  \|  | \/\  \___
+#  |___  //____  >|   __/  \/\_/ |__|_|  /|__|    \___  >
+#      \/      \/ |__|                 \/             \/
+
+
 sxhkd &
-/home/omar/.config/polybar/launch.sh &
+xrdb merge ~/.Xresources &
+~/.config/polybar/bar.sh &
 compton &
 nm-applet &
 sh .fehbg &
@@ -32,4 +41,7 @@ bspc rule -a Firefox state=floating follow=on
 bspc rule -a Pcmanfm state=floating follow=on
 bspc rule -a URxvt state=floating follow=on
 bspc rule -a Audacious state=floating follow=on
+bspc rule -a feh state=floating follow=on
+bspc rule -a Sublime_text state=floating follow=on
+bspc rule -a TelegramDesktop state=floating follow=on
 bspc rule -a Conky manage=off

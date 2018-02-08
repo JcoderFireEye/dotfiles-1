@@ -1,5 +1,11 @@
 #
 # wm independent hotkeys
+#                .__      __        .___
+#   _________  ___|  |__  |  | __  __| _/_______   ____
+#  /  ___/\  \/  /|  |  \ |  |/ / / __ | \_  __ \_/ ___\
+#  \___ \  >    < |   Y  \|    < / /_/ |  |  | \/\  \___
+# /____  >/__/\_ \|___|  /|__|_ \\____ |  |__|    \___  >
+#      \/       \/     \/      \/     \/              \/
 #
 
 # terminal emulator
@@ -8,7 +14,9 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run -fn 'TerminessTTF Nerd Font:size=12' -i -x 30 -y 35 -w 450 -p ' Search ' -nb '#2f343f' -nf '#e7e8eb' -sb '#2f343f' -sf '#5294E2'
+	rofi -show run
+alt + F2
+	dmenu_run -i -fn 'iosevka Nerd Font:size=9' -x 30 -y 35 -w 800 -p ' Search  ' -nb '#2f343f' -nf '#e7e8eb' -sb '#81A1C1' -sf '#2f343f' -h 27
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -20,15 +28,15 @@ XF86AudioLowerVolume
 	amixer -D pulse sset Master '5%-'
 
 XF86AudioNext
-	mpc next --port 6601
+	mpc -p 6601 next
 XF86AudioPrev
-	mpc prev --port 6601
+	mpc -p 6601 prev
 XF86AudioPlay
-	mpc toggle --port 6601
+	mpc -p 6601 toggle
 XF86AudioPause
-	mpc toggle --port 6601
+	mpc -p 6601 toggle
 XF86AudioStop
-	mpc stop --port 6601
+	mpc -p 6601 stop
 
 Print
 	scrot
