@@ -14,7 +14,7 @@ Dotfiles pribadi maupun curryan darimana sadja
 ## Preview
 
 ## Openbox
-![openbox](https://orig00.deviantart.net/2bc5/f/2018/013/9/a/darksetup_by_fikriomar16-dbzulgt.png)
+![openbox](https://orig00.deviantart.net/8df1/f/2018/040/1/d/imitator_by_fikriomar16-dc2mnnj.png)
 
 ## XFCE
 ![xfce](https://orig00.deviantart.net/b506/f/2018/008/8/4/accidentally_ngidol_by_fikriomar16-dbzciec.png)
