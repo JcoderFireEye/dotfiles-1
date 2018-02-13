@@ -1,20 +1,14 @@
 Dotfiles pribadi maupun curryan darimana sadja
 
-```sh
-
-                         ___  ___   ___        ___                         ___  ___   ___
-  .'|=|`.     .'|=|`.   `._|=|   |=|_.'   .'|=|_.'   .'|   .'|        .'|=|_.' |   |=|_.'
-.'  | |  `. .'  | |  `.      |   |      .'  |  ___ .'  | .'  |      .'  |  ___ `.  |
-|   | |   | |   | |   |      |   |      |   |=|_.' |   | |   |      |   |=|_.'   `.|=|`.
-|   | |  .' `.  | |  .'      `.  |      |   |      |   | |   |  ___ |   |  ___  ___  |  `.
-|___|=|.'     `.|=|.'          `.|      |___|      |___| |___|=|_.' |___|=|_.'  `._|=|___|
-
-```
+<p align="center">
+	<a name="top" href="https://github.com/fikriomar16/dotfiles"><img src="http://dotfiles.github.io/images/dotfiles-logo.png">
+	</a>
+</p>
 
 ## Preview
 
 ## Openbox
-![openbox](https://orig00.deviantart.net/8df1/f/2018/040/1/d/imitator_by_fikriomar16-dc2mnnj.png)
+![openbox](https://orig00.deviantart.net/cb01/f/2018/043/9/7/mazariau_mono_by_fikriomar16-dc2yrwz.png)
 
 ## XFCE
 ![xfce](https://orig00.deviantart.net/b506/f/2018/008/8/4/accidentally_ngidol_by_fikriomar16-dbzciec.png)
