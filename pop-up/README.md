@@ -5,7 +5,7 @@
 
 ## Preview
 
-![prev](https://github.com/fikriomar16/dotfiles/blob/master/lemonbar/prev.png)
+![prev](https://github.com/fikriomar16/dotfiles/blob/master/pop-up/prev.png)
 Lemonbar : [lime](https://github.com/fikriomar16/dotfiles/blob/master/lemonbar/lime)
 
 ## Credits
