@@ -1,0 +1,3 @@
+#!/bin/bash
+
+(echo "%{c}    Taking Shot  "; scrot -cd 10) | lemonbar -g 170x40+1150+50 -b -B "#2f343f" -F "#B48EAD" -f "iosevka\Nerd\Font:bold:9"

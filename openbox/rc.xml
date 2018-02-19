@@ -42,8 +42,8 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>NAO-Flatabulous v3</name>
-    <titleLayout>CMIL</titleLayout>
+    <name>Ancok</name>
+    <titleLayout>CMILSD</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -61,7 +61,7 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>mplus Nerd Font</name>
+      <name>Iosevka Nerd Font</name>
       <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -70,7 +70,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>mplus Nerd Font</name>
+      <name>Iosevka Nerd Font</name>
       <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -79,25 +79,25 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>mplus Nerd Font</name>
+      <name>Iosevka Nerd Font</name>
       <size>10</size>
       <!-- font size in points -->
-      <weight>Normal</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>mplus Nerd Font</name>
+      <name>Iosevka Nerd Font</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>Normal</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>mplus Nerd Font</name>
+      <name>Iosevka Nerd Font</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -106,7 +106,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>mplus Nerd Font</name>
+      <name>Iosevka Nerd Font</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -496,12 +496,12 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>rofi -show run -fullscreen True -lines 3 -line-margin 6 -padding 270 -bw 0 -opacity "70" -scrollbar-width 0 -separator-style "none"</command>
+        <command>rofi -show run</command>
       </action>
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
-        <command>dmenu_run -i -fn 'mplus Nerd Font:size=11' -x 525 -y 270 -w 325 -l 5 -p ' Search ' -nb '#2f343f' -nf '#e7e8eb' -sb '#2f343f' -sf '#5294E2' -h 30 -o 0.9</command>
+        <command>dmenu_run -i -fn 'iosevka Nerd Font:size=9' -x 113 -y 0 -w 830 -p 'Search ' -nb '#2f343f' -nf '#e7e8eb' -sb '#2f343f' -sf '#5294E2' -h 28</command>
       </action>
     </keybind>
     <keybind key="A-S-Escape">
