@@ -8,7 +8,8 @@ Dotfiles pribadi maupun curryan darimana sadja
 ## Preview
 
 ## Openbox
-![openbox](https://orig00.deviantart.net/cb01/f/2018/043/9/7/mazariau_mono_by_fikriomar16-dc2yrwz.png)
+![openbox](https://orig00.deviantart.net/b01f/f/2018/049/0/4/ancok_by_fikriomar16-dc3m51n.png)
+[OB Theme](https://github.com/fikriomar16/OBTheme-Collections)<br />
 
 ## XFCE
 ![xfce](https://orig00.deviantart.net/b506/f/2018/008/8/4/accidentally_ngidol_by_fikriomar16-dbzciec.png)
