@@ -5,10 +5,33 @@ Dotfiles pribadi maupun curryan darimana sadja
 	</a>
 </p>
 
+# Details
+
+| Item | Value |
+| :--- | :---- |
+| OS | Ubuntu 16.04 |
+| Fav WM(s) | Openbox, i3, bspwm, herbstluftwm, dwm |
+| Shell | Zsh, bash |
+| DM | Lightdm |
+| Font | iosevka Ner Font |
+| Compositor | compton |
+| Notification | xfce4-notifyd |
+| Terminal | URxvt, gnome-terminal, termite |
+| Launcher | rofi, dmenu |
+| Bar | Lemonbar, Polybar, dzen2 |
+| Wallpaper | nitrogen |
+| Lock Screen | lxlock |
+| Logout / Shutdown | lxlogout |
+| Volume Control | amixer |
+| Brightness Controller | xbacklight |
+| Network Applet | nm-applet |
+| Bluetooth Applet | blueman-applet |
+| Text Editor | vim, sublime, gedit |
+
 ## Preview
 
 ## Openbox
-![openbox](https://orig00.deviantart.net/b01f/f/2018/049/0/4/ancok_by_fikriomar16-dc3m51n.png)
+![openbox](https://i.imgur.com/qDV3qz0.png)
 [OB Theme](https://github.com/fikriomar16/OBTheme-Collections)<br />
 
 ## XFCE

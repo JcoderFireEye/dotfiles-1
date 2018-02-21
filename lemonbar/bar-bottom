@@ -11,7 +11,7 @@
 
 pkill lemonbar
 
-color0='#2f343f'
+color0='#952f343f'
 color8='#444A57'
 color1='#BF616A'
 color9='#BF616A'
@@ -29,12 +29,12 @@ color7='#e1e1e1'
 color15='#e7e8eb'
 
 bg="%{B$color0}%{F$color6}"
-active="%{B$color6}%{F$color15}"
+active="%{B$color6}%{F$color0}"
 #trans="%{B#002f343f}%{F#00e7e8eb}"
 
 geo="1366x28+0+0"
-f1="iosevka\Nerd\Font:size=10"
-f2="TakaoPGothic:size=11"
+f1="iosevka\Nerd\Font:size=9"
+f2="TakaoPGothic:size=10"
 
 wsa="  "
 wsd="  "
@@ -58,18 +58,17 @@ get_ws(){
     for i in {0..3}; do
         echo -n "$bg%{A:xdotool set_desktop $i:}"
         if [[ "$((desk))" == "$i" ]]; then
-            echo -n "$active$wsa $i"
+            echo -n "$active"
         else
-            echo -n "$wsd $i"
+            echo -n ""
         fi
-        echo -n "%{O10}"
-        echo -n "${wsname[$((i-1))]}" | tr '[:lower:]' '[:upper:]'
-        echo -n "%{O10}%{A}"
+        echo -n "${wsname[$((i))]}" | tr '[:lower:]' '[:upper:]'
+        echo -n "%{A}"
 done
 }
 
 get_song() {
-    echo "%{B$color0}%{F$color15}%{A:popup-bottom:}%{A3:pkill n30f:} $(mpc -p 6601 current) %{A}%{A}$trans"
+    echo "%{B$color0}%{F$color15}%{A:popup-bottom:} $(mpc -p 6601 current) %{A}"
 }
 icon_song(){
     echo "%{B$color0}%{F$color1}%{A:mpc -p 6601 toggle:}%{A3:mpd-popup:}  %{A}%{A}"
@@ -168,7 +167,7 @@ icon_time(){
 }
 
 while true; do
-    echo " %{l} $(get_workspaces) $(icon_song)$(get_song) \
-    %{r} $(icon_network)$(get_network) $(icon_volume)$(get_volume) $(icon_battery)$(get_battery) $(icon_date)$(get_date)$(icon_time)$(get_time)"
+    echo " %{l} $(get_ws) $(icon_song)$(get_song) \
+    %{r} $(icon_network)$(get_network) $(icon_volume)$(get_volume) $(icon_battery)$(get_battery) $(icon_date)$(get_date)$(icon_time)$(get_time)%{O10}"
     sleep 1
 done | lemonbar -b -g "${geo}" -f "${f1}" -f "${f2}" | sh & > /dev/null
