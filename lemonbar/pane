@@ -70,11 +70,11 @@ done
 
 get_window(){	
 	id=$(xtitle -t 50)
-	echo -n "%{B$color3}%{F$color0}  $id %{B-}%{F-}"
+	echo "%{B$color3}%{F$color0}  $id %{B-}%{F-}"
 }
 
 get_song(){
-    echo "%{B$color1}%{F$color15}%{A:mpc -p 6601 toggle:}%{A3:mpd-popup:}   %{A}%{A}%{A:popup-bottom:} $(mpc -p 6601 current) %{A}%{B-}%{F-}"
+    echo "%{B$color1}%{F$color15}%{A:mpc -p 6601 toggle:}%{A3:mpd-popup:}   %{A}%{A}%{A:popup-pane:} $(mpc -p 6601 current) %{A}%{B-}%{F-}"
 }
 
 get_network(){
@@ -122,8 +122,8 @@ get_time(){
 }
 
 while true; do
-    echo "$brdr %{l} $(get_song) $(get_window) \
+    echo "$brdr %{l}%{O10} $(get_song) $(get_window) \
     %{c} $(get_ws) \
-    %{r} $(get_network) $(get_volume) $(get_battery) $(get_date) $(get_time)%{O10}"
+    %{r} $(get_network) $(get_volume) $(get_battery) $(get_date) $(get_time)%{O10} "
     sleep 1
 done | lemonbar -b -g "${geo}" -f "${f1}" -f "${f2}" -B "$color0" -F "$color15" -u 3 | sh & > /dev/null
