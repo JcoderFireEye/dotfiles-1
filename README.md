@@ -51,3 +51,6 @@ Dotfiles pribadi maupun curryan darimana sadja
 [Google+](https://plus.google.com/+FikriOmar) <br />
 [DeviantArt](http://fikriomar16.deviantart.com) <br />
 [Twitter](https://twitter.com/fikriomar16)
+
+## License
+The code is available under the [MIT License](https://github.com/fikriomar16/dotfiles/blob/master/LICENSE.md)
