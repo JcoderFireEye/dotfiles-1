@@ -69,7 +69,6 @@ URxvt.tabbedex.tab-fg:			10
 URxvt.tabbedex.tab-bg:			0
 URxvt.tabbedex.title:			yes
 URxvt.tabbedex.new-button:		no
-URxvt.keysym.F11: 		
 URxvt*geometry: 82x11
 URxvt.internalBorder: 20
 
