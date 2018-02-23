@@ -1,13 +1,15 @@
-Xft.dpi:85
-Xft.antialiasing:false
-Xft.rgba:rgb
-Xft.hinting:true
-Xft.lcdfilter:lcddefault
+Xft.dpi:        85
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle: hintslight
+
 URxvt.imLocale: pl_PL.UTF-8
-URxvt.font:xft:iosevka Nerd Font:size=9
-URxvt*letterSpace:-1
+URxvt.font:xft:mononoki Nerd Font:regular:size=9		
+URxvt*letterSpace:-2
 URxvt*allow_bold:true
-URxvt*iconFile: /usr/share/icons/Papirus/64x64/apps/utilities-x-terminal.svg
+URxvt*iso14755: False
+URxvt*iconFile: /home/omar/.icons/Mix Oplos/apps/scalable/utilities-terminal.svg
 
 *background: #2F343F
 *foreground: #EFF0EB
@@ -52,11 +54,12 @@ URxvt.keysym.M-u:			perl:url-select:select_next
 URxvt.url-select.launcher:		firefox
 URxvt.url-select.underline:		true
 URxvt.insecure: 			false
-URxvt.keysym.M-c: 			perl:clipboard:copy
-URxvt.keysym.M-v: 			perl:clipboard:paste
+URxvt.keysym.Shift-Control-C: 			perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: 			perl:clipboard:paste
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
 URxvt*saveLines: 			300000
 URxvt.scrollBar: 			false
-!URxvt*scrollstyle:			plain
 URxvt*cursorBlink: 			false
 URxvt*cursorUnderline: 		        true
 URxvt.tabbedex.autohide:		yes
@@ -66,14 +69,13 @@ URxvt.tabbedex.tab-fg:			10
 URxvt.tabbedex.tab-bg:			0
 URxvt.tabbedex.title:			yes
 URxvt.tabbedex.new-button:		no
-URxvt.keysym.F11: 			perl:fullscreen:switch
-!URxvt*geometry: 87x14
+URxvt.keysym.F11: 		
 URxvt*geometry: 82x11
 URxvt.internalBorder: 20
 
 
 XTerm*letterSpace:-2
-XTerm*faceName: ShureTechMono Nerd Font
+XTerm*faceName: iosevka Nerd Font
 xterm*faceSize: 9
 xterm*internalBorder: 20
 xterm*vt100*geometry: 70x20
@@ -85,7 +87,7 @@ xterm*eightBitInput: false
 
 UXTerm*termName: xterm-256color
 UXTerm*VT100.geometry:     92x17
-UXTerm*font:               ShureTechMono Nerd Font
+UXTerm*faceName:               ShureTechMono Nerd Font
 UXTerm*faceSize:		   9
 UXTerm*dynamicColors:      true
 UXTerm*utf8:               2
