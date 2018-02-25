@@ -31,8 +31,9 @@ Dotfiles pribadi maupun curryan darimana sadja
 ## Preview
 
 ## Openbox
-![openbox](https://i.imgur.com/qDV3qz0.png)
-[OB Theme](https://github.com/fikriomar16/OBTheme-Collections)<br />
+![openbox](https://i.imgur.com/WarXMsF.png)
+[Openbox-patched](https://github.com/dylanaraps/openbox-patched)<br />
+Openbox Theme Generated Using [obtgen](git,io/obtgen)<br />
 
 ## XFCE
 ![xfce](https://orig00.deviantart.net/b506/f/2018/008/8/4/accidentally_ngidol_by_fikriomar16-dbzciec.png)
@@ -44,7 +45,7 @@ Dotfiles pribadi maupun curryan darimana sadja
 ![bspwm](https://orig00.deviantart.net/776d/f/2018/037/5/c/_re_make_by_fikriomar16-dc2citp.png)
 
 ## herbstluftwm
-![hlwm](https://orig00.deviantart.net/af96/f/2018/026/6/8/herbstluftwm_by_fikriomar16-dc1afhg.png)
+![hlwm](https://i.imgur.com/lzz6Yyd.png)
 
 
 ## Social Media

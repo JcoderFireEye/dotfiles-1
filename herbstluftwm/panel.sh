@@ -13,7 +13,7 @@ y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=23
 font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
-font2="mplus Nerd Font:size=11:antialias=false"
+font2="iosevka Nerd Font:size=10:antialias=true"
 bgcolor=$(hc get frame_border_normal_color)
 selbg=$(hc get window_border_active_color)
 selfg='#101010'
@@ -97,7 +97,7 @@ hc pad $monitor $panel_height
                     echo -n "^bg(#9CA668)^fg(#141414)"
                     ;;
                 ':')
-                    echo -n "^bg()^fg(#ffffff)"
+                    echo -n "^bg()^fg(#81A1C1)"
                     ;;
                 '!')
                     echo -n "^bg(#FF0675)^fg(#141414)"
@@ -118,7 +118,7 @@ hc pad $monitor $panel_height
             fi
         done
         echo -n "$separator"
-        echo -n "^bg(#e7e8eb)^fg(#2f343f) ${currentplaying} "
+        echo -n "^bg(#BF616A)^fg(#e7e8eb)  ${currentplaying} "
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^} "
         # small adjustments

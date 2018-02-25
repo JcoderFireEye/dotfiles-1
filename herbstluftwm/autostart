@@ -12,6 +12,7 @@
 compton &
 nitrogen --restore &
 xrdb merge ~/.Xresources &
+~/.config/herbstluftwm/lemonluft &
 
 hc() {
     herbstclient "$@"
@@ -34,7 +35,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 #hc keybind $Mod-Return spawn ${TERMINAL:-xterm} # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal}
-hc keybind $Mod-d spawn dmenu_run -i -nb '#2f343f' -nf '#e7e8eb' -sb '#e7e8eb' -sf '#2f343f' -fn 'mplus Nerd Font:size=11' -x 245 -w 950 -p 'Search ' -h 23
+hc keybind $Mod-d spawn dmenu_run -i -nb '#e7e8eb' -nf '#2F343F' -sb '#BF616A' -sf '#e7e8eb' -fn 'iosevka Nerd Font:size=10' -x 635 -y 250 -w 100 -l 10 -p '' -h 25 -dim 0.0
 hc keybind XF86AudioRaiseVolume spawn amixer -D pulse sset Master '3%+'
 hc keybind XF86AudioLowerVolume spawn amixer -D pulse sset Master '3%-'
 hc keybind XF86AudioNext spawn mpc next --port 6601
@@ -44,7 +45,7 @@ hc keybind XF86AudioPause spawn mpc toggle --port 6601
 hc keybind XF86AudioStop spawn mpc stop --port 6601
 hc keybind Print spawn scrot
 hc keybind $Mod-Print spawn scrot -u -b
-hc keybind $Mod-m spawn urxvt -g 70x10 -e ncmpcpp -c ~/.ncmpcpp/config-art
+hc keybind $Mod-m spawn urxvt -g 70x10 -e ncmpcpp -c ~/.ncmpcpp/ncmpcpp2
 hc keybind $Mod-Shift-f spawn pcmanfm
 hc keybind $Mod-w spawn firefox
 
@@ -139,23 +140,23 @@ hc set frame_border_active_color '#222222'
 hc set frame_border_normal_color '#2F343F'
 hc set frame_bg_normal_color '#383c4a'
 hc set frame_bg_active_color '#d4d4d4'
-hc set frame_border_width 6
+hc set frame_border_width 5
 hc set always_show_frame 1
 hc set frame_bg_transparent 3
 hc set frame_transparent_width 0
 hc set frame_gap 10
 
-hc attr theme.active.color '#e7e8eb'
-hc attr theme.normal.color '#2f343f'
+hc attr theme.active.color '#81A1C1'
+hc attr theme.normal.color '#B48EAD'
 hc attr theme.urgent.color '#a66363'
 hc attr theme.inner_width 0
 hc attr theme.inner_color '#6385a6'
-hc attr theme.border_width 4
-hc attr theme.floating.border_width 4
-hc attr theme.floating.outer_width 2
+hc attr theme.border_width 6
+hc attr theme.floating.border_width 8
+hc attr theme.floating.outer_width 4
 hc attr theme.floating.outer_color '#719bc2'
-hc attr theme.active.inner_color '#d4d4d4'
-hc attr theme.active.outer_color '#d4d4d4'
+hc attr theme.active.inner_color '#2f343f'
+hc attr theme.active.outer_color '#2f343f'
 hc attr theme.normal.inner_color '#383c4a'
 hc attr theme.normal.outer_color '#383c4a'
 hc attr theme.background_color '#141414'
@@ -188,11 +189,14 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # or simply:
 # hc detect_monitors
 
+monitor=${1:-0}
+hc set_monitors 1366x768+0+0
+hc pad $monitor 25
+
 # find the panel
-panel=~/.config/herbstluftwm/panel.sh
-#panel=~/.config/herbstluftwm/panel
-[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-    # start it on each monitor
-    "$panel" $monitor &
-done
+#panel=~/.config/herbstluftwm/panel.sh
+#[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+#for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+#    # start it on each monitor
+#    "$panel" $monitor &
+#done
