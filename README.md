@@ -31,9 +31,9 @@ Dotfiles pribadi maupun curryan darimana sadja
 ## Preview
 
 ## Openbox
-![openbox](https://i.imgur.com/WarXMsF.png)
+![openbox](https://i.imgur.com/nUnTKM1.png)
 [Openbox-patched](https://github.com/dylanaraps/openbox-patched)<br />
-Openbox Theme Generated Using [obtgen](git,io/obtgen)<br />
+Openbox Theme Generated Using [obtgen](https://git.io/obtgen)<br />
 
 ## XFCE
 ![xfce](https://orig00.deviantart.net/b506/f/2018/008/8/4/accidentally_ngidol_by_fikriomar16-dbzciec.png)
