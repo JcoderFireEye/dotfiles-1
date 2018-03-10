@@ -31,7 +31,7 @@ Dotfiles pribadi maupun curryan darimana sadja
 ## Preview
 
 ## Openbox
-![openbox](https://i.imgur.com/nUnTKM1.png)
+![openbox](https://i.imgur.com/OWU2aEr.png)
 [Openbox-patched](https://github.com/dylanaraps/openbox-patched)<br />
 Openbox Theme Generated Using [obtgen](https://git.io/obtgen)<br />
 
@@ -39,13 +39,16 @@ Openbox Theme Generated Using [obtgen](https://git.io/obtgen)<br />
 ![xfce](https://orig00.deviantart.net/b506/f/2018/008/8/4/accidentally_ngidol_by_fikriomar16-dbzciec.png)
 
 ## i3-gaps
-![i3wm](https://orig00.deviantart.net/2c8e/f/2018/029/b/7/play_with_i3_gaps_by_fikriomar16-dc1ircw.png)
+![i3wm](https://i.imgur.com/XooeFi8.png)
 
 ## bspwm
 ![bspwm](https://orig00.deviantart.net/776d/f/2018/037/5/c/_re_make_by_fikriomar16-dc2citp.png)
 
 ## herbstluftwm
 ![hlwm](https://i.imgur.com/lzz6Yyd.png)
+
+## awesome
+![awesome](https://i.imgur.com/d6sY85J.png)
 
 
 ## Social Media

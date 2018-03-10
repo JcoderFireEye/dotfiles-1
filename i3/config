@@ -9,16 +9,16 @@ set $mod mod1
 
 font pango:iosevka Nerd Font 10
 
-set $background #2F343F
-set $foreground #ffffff
-set $gray       #d0d0d0
+set_from_resource $background i3wm.color0 #2F343F
+set_from_resource $foreground i3wm.color7 #ffffff
+set_from_resource $red        i3wm.color1 #d0d0d0
 
-set $primary    #cca8c9
-set $secondary  #9cdbdf
-set $tertiary   #9ad4c8
+set_from_resource $primary    i3wm.color4 #81A1C1
+set_from_resource $secondary  i3wm.color3 #e7e8eb
+set_from_resource $tertiary   i3wm.color5 #B48EAD
 
-set $additional	#bae8d2
-set $warning    #de8990
+set_from_resource $additional  i3wm.color2  #bae8d2
+set_from_resource $warning     i3wm.color6  #de8990
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -28,6 +28,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec --no-startup-id xrdb merge ~/.Xresources
+exec --no-startup-id wal -R
 
 # Polybar
 #exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -56,11 +57,11 @@ bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master '5%+'
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master '5%-'
 
 # music control
-bindsym XF86AudioNext exec mpc next --port 6601
-bindsym XF86AudioPrev exec mpc prev --port 6601
-bindsym XF86AudioPlay exec mpc toggle --port 6601
-bindsym XF86AudioPause exec mpc toggle --port 6601
-bindsym XF86AudioStop exec mpc stop --port 6601
+bindsym XF86AudioNext exec mpc -p 6601 next
+bindsym XF86AudioPrev exec mpc -p 6601 prev
+bindsym XF86AudioPlay exec mpc -p 6601 toggle
+bindsym XF86AudioPause exec mpc -p 6601 toggle
+bindsym XF86AudioStop exec mpc -p 6601 stop
 
 #screenshots
 bindsym Print exec --no-startup-id scrot
@@ -68,9 +69,8 @@ bindsym $mod+Print exec --no-startup-id scrot -u -b
 bindsym Control+Print exec --no-startup-id xfce4-screenshooter
 
 # program launcher
-bindsym $mod+d exec dmenu_run -i -nb '#2f343f' -nf '#cca8c9' -sb '#cca8c9' -sf '#2f343f' -fn 'iosevka Nerd Font:size=10' -x 27 -y 27 -w 600 -p 'Run ' -o 0.9 -h 27
-#bindsym $mod+d exec dmenu_run
-bindsym $mod+s exec rofi -show run -fullscreen True -lines 3 -line-margin 6 -padding 270 -bw 0 -opacity "70" -font "iosevka Nerd Font 12" -scrollbar-width 0 -separator-style "none"
+bindsym $mod+d exec dmenu_run -i -nb "$background" -nf "$primary" -sb "$primary" -sf "$background" -fn 'iosevka Nerd Font:size=9' -x 35 -y 35 -w 700 -p 'Run ' -o 0.9 -h 27
+bindsym $mod+s exec rofi -show run
 
 bindsym $mod+m exec urxvt -g 70x10 -e ncmpcpp -c ~/.ncmpcpp/ncmpcpp2
 
@@ -178,10 +178,10 @@ bindsym $mod+g mode "gaps"
 bindsym $mod+r mode "resize"
 
 # colors                BORDER      BACKGROUND TEXT        INDICATOR
-client.focused          $primary    $primary   $foreground $primary
-client.focused_inactive $secondary  $secondary $foreground $secondary
-client.unfocused        $tertiary   $tertiary  $background $tertiary
-client.urgent           $gray       $gray      $foreground $gray  
+client.focused          $background  $background  $primary     $primary
+client.focused_inactive $background  $background  $tertiary    $tertiary
+client.unfocused        $background  $background  $secondary   $secondary
+client.urgent           $red         $red         $foreground  $red  
 
 # Start i3bar to display a workspace bar (plus the system information i3status)
 bar {
@@ -205,10 +205,11 @@ bar {
     }
 }
 
-#for_window [class="^.*"] border normal 0
+for_window [class="^.*"] border normal 0
 #for_window [class=".*"] title_format " >_ %title "
+for_window [class=".*"] title_format "  <span foreground='$background' background='$primary'> %class </span><b>  %title </b>"
 
-for_window [class=".*"] border pixel 3
+#for_window [class=".*"] border pixel 3
 gaps inner 20
 gaps outer 10
 
