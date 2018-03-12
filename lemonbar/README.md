@@ -17,3 +17,6 @@
 
 ## transbar
 ![transbar](https://github.com/fikriomar16/dotfiles/raw/master/lemonbar/preview/transbar.png)
+
+## nganu
+![nganu](https://github.com/fikriomar16/dotfiles/raw/master/lemonbar/preview/nganu.png)
