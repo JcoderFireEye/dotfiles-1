@@ -20,3 +20,6 @@
 
 ## nganu
 ![nganu](https://github.com/fikriomar16/dotfiles/raw/master/lemonbar/preview/nganu.png)
+
+## ez
+![ez](https://github.com/fikriomar16/dotfiles/raw/master/lemonbar/preview/ez.png)
