@@ -1,0 +1,4 @@
+#!/bin/bash
+#urxvt -g 70x10 -e mpdviz -i --step=30
+urxvt -g 52x6 -e mpdviz -i --step=30
+exit 0
